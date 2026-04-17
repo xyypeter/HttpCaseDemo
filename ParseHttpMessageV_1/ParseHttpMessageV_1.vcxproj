@@ -123,7 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HttpParser.cpp" />
     <ClCompile Include="ParseHttpMessageV_1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HttpParser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
