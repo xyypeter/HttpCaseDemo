@@ -38,9 +38,9 @@ private:
     // 重置当前解析状态，清空缓冲区和当前的请求结构，准备下一次解析
     void reset();
 private:
-    std::string buffer_;              // 内部缓冲区,用于积累未解析完成的数据
-    HttpRequest current_;             // 当前正在解析的请求
-    std::queue<HttpRequest> requests_;// 已解析完成的请求队列
-    ParseState state_ = ParseState::REQUEST_LINE;//加入状态  
-    size_t content_length_ = 0;                  //加入长度  
+    std::string buffer_;                         // 内部缓冲区,用于积累未解析完成的数据
+    HttpRequest current_;                        // 当前正在解析的请求
+    std::queue<HttpRequest> requests_;           // 已解析完成的请求队列
+    ParseState state_ = ParseState::REQUEST_LINE;// 加入状态  
+    size_t content_length_ = 0;                  // 加入长度  
 };
